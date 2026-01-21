@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Exchange Pro | Searchable</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="exchange-card">
+        <div class="header">
+            <h2>Currency <span class="pro-label">PRO</span></h2>
+            <p>Search & Convert Worldwide</p>
+        </div>
+
+        <div class="input-container">
+            <label>Amount to Convert</label>
+            <input type="number" id="amount" value="1.00">
+        </div>
+
+        <div class="selection-grid">
+            <div class="select-box">
+                <label>From</label>
+                <div class="custom-dropdown" id="fromDropdown">
+                    <div class="selected-display" onclick="toggleDropdown('from')">
+                        <img id="fromFlag" src="https://flagsapi.com/US/flat/64.png">
+                        <span id="fromText">USD</span>
+                        <div class="arrow"></div>
+                    </div>
+                    <div class="dropdown-content">
+                        <input type="text" placeholder="Search currency..." onkeyup="filterCurrency(this, 'from')">
+                        <div class="options-list" id="fromOptions"></div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="swap-btn" onclick="swapCurrencies()">⇅</button>
+
+            <div class="select-box">
+                <label>To</label>
+                <div class="custom-dropdown" id="toDropdown">
+                    <div class="selected-display" onclick="toggleDropdown('to')">
+                        <img id="toFlag" src="https://flagsapi.com/GB/flat/64.png">
+                        <span id="toText">GBP</span>
+                        <div class="arrow"></div>
+                    </div>
+                    <div class="dropdown-content">
+                        <input type="text" placeholder="Search currency..." onkeyup="filterCurrency(this, 'to')">
+                        <div class="options-list" id="toOptions"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="result-panel">
+            <div class="result-header">Converted Amount</div>
+            <div id="resultText">--. --</div>
+            <div id="rateDetails">Connecting to market...</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
