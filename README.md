@@ -18,6 +18,7 @@ Inversion Feature: Quickly swap "From" and "To" currencies with a single click.
 Professional UI: A clean, focused design that prioritizes functionality and readability.
 
 🛠️ Tech Stack
+
 Frontend: React.js
 
 API Integration: Currency Exchange Rate API (for live market data) and FlagsAPI (for country icons).
