@@ -31,7 +31,7 @@ The project follows a clean, feature-driven architecture:
 - `src/data/`: Comprehensive world currency dataset and type definitions.
 - `src/services/`: Abstracted API interaction layer.
 - `src/styles/`: Global design tokens and base styles.
-- `legacy/`: Original vanilla JavaScript project files for reference.
+- `src/legacy/`: Original vanilla JavaScript project files for reference.
 
 ## 🚦 Getting Started
 
